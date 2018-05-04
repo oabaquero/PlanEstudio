@@ -6,8 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="planestudio.MateriasController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planestudio.MateriasController">
    <children>
       <SplitPane dividerPositions="0.696236559139785" orientation="VERTICAL" prefHeight="404.0" prefWidth="600.0">
          <items>
@@ -15,9 +14,9 @@
                <children>
                   <TableView fx:id="twMaterias" layoutX="-2.0" layoutY="-3.0" prefHeight="284.0" prefWidth="600.0">
                      <columns>
-                        <TableColumn prefWidth="153.0" text="Código" />
-                        <TableColumn prefWidth="342.0" text="Nombre" />
-                        <TableColumn prefWidth="104.0" text="Semestre" />
+                        <TableColumn fx:id="tcCodigo" prefWidth="153.0" text="Código" />
+                        <TableColumn fx:id="tcNombre" prefWidth="342.0" text="Nombre" />
+                        <TableColumn fx:id="tcSemestre" prefWidth="104.0" text="Semestre" />
                      </columns>
                   </TableView>
                </children>
@@ -32,8 +31,8 @@
                         <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="114.0" text="Código:" textAlignment="RIGHT" />
                         <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="115.0" text="Nombre:" GridPane.rowIndex="1" />
                         <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="116.0" text="Semestre:" GridPane.rowIndex="2" />
-                        <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#accionActualizar" text="Actualizar Materia" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                        <Button fx:id="btnConsultar" alignment="BOTTOM_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#accionConsultar" prefHeight="27.0" prefWidth="129.0" text="Consultar Materia" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnActualizar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionActualizar" prefHeight="25.0" prefWidth="131.0" text="Actualizar Materia" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Button fx:id="btnConsultar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionConsultar" prefHeight="27.0" prefWidth="129.0" text="Consultar Materia" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
                      </children>
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="131.0" />

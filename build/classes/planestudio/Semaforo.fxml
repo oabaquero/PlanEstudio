@@ -11,17 +11,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="982.0" prefWidth="1347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="982.0" prefWidth="1461.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planestudio.SemaforoController">
    <children>
-      <SplitPane dividerPositions="0.18507157464212678" layoutX="-2.0" layoutY="1.0" orientation="VERTICAL" prefHeight="980.0" prefWidth="1350.0">
+      <SplitPane dividerPositions="0.18507157464212678" layoutX="-2.0" layoutY="1.0" orientation="VERTICAL" prefHeight="980.0" prefWidth="1471.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="69.0" prefWidth="1037.0">
                <children>
-                  <GridPane prefHeight="82.0" prefWidth="1348.0">
+                  <GridPane prefHeight="82.0" prefWidth="1467.0">
                      <children>
                         <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="114.0" text="Código:" textAlignment="RIGHT" />
                         <TextField fx:id="txtCodigo" GridPane.columnIndex="1" />
-                        <Button fx:id="btnConsultar" alignment="BOTTOM_LEFT" contentDisplay="TOP" mnemonicParsing="false" prefHeight="27.0" prefWidth="149.0" text="Consultar Estudiante" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnConsultar" alignment="BOTTOM_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#accionConsultar" prefHeight="27.0" prefWidth="149.0" text="Consultar Estudiante" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
                         <Label text="Código: " GridPane.rowIndex="1" />
                         <Text fx:id="tCodigo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="144.21875" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                         <Label text="Nombres:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -39,7 +39,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
-                  <GridPane layoutX="3.0" layoutY="73.0" prefHeight="102.0" prefWidth="1354.0">
+                  <GridPane layoutX="3.0" layoutY="73.0" prefHeight="102.0" prefWidth="1460.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     </columnConstraints>
@@ -78,990 +78,1239 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="805.0" prefWidth="1348.0">
                <children>
-                  <GridPane layoutX="-3.0" layoutY="-2.0" prefHeight="796.0" prefWidth="1353.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                  <HBox layoutX="14.0" layoutY="35.0" prefHeight="100.0" prefWidth="1434.0" spacing="12.0">
                      <children>
-                        <GridPane>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
+                        <Pane fx:id="pane1S1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S1" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
                            </children>
-                        </GridPane>
-                        <GridPane GridPane.rowIndex="1">
+                        </Pane>
+                        <Pane fx:id="pane1S2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S2" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.rowIndex="2">
+                        </Pane>
+                        <Pane fx:id="pane1S3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S3" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.rowIndex="3">
+                        </Pane>
+                        <Pane fx:id="pane1S4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="131.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S4" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.rowIndex="4">
+                        </Pane>
+                        <Pane fx:id="pane1S5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S5" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.rowIndex="5">
+                        </Pane>
+                        <Pane fx:id="pane1S6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S6" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="1">
+                        </Pane>
+                        <Pane fx:id="pane1S7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S7" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        </Pane>
+                        <Pane fx:id="pane1S8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="134.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S8" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        </Pane>
+                        <Pane fx:id="pane1S9" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="135.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S9" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        </Pane>
+                        <Pane fx:id="pane1S10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre1S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo1S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota1S10" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
                            </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="5" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="5" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="5" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="5" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="5" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="6">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="6" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="6" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="6" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="6" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="6" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="7">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="7" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="7" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="7" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="7" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="7" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="8">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="8" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="8" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="8" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="8" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="8" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="9">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="9" GridPane.rowIndex="1">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="9" GridPane.rowIndex="2">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="9" GridPane.rowIndex="3">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="9" GridPane.rowIndex="4">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
-                        <GridPane GridPane.columnIndex="9" GridPane.rowIndex="5">
-                           <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="2" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
-                           </children>
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                        </GridPane>
+                        </Pane>
                      </children>
-                  </GridPane>
+                  </HBox>
+                  <HBox layoutX="13.0" layoutY="155.0" prefHeight="100.0" prefWidth="1434.0" spacing="12.0">
+                     <children>
+                        <Pane fx:id="pane2S1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S1" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S2" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S3" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="131.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S4" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S5" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S6" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S7" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="134.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S8" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S9" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="135.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S9" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane2S10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre2S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo2S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota2S10" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="11.0" layoutY="275.0" prefHeight="100.0" prefWidth="1434.0" spacing="12.0">
+                     <children>
+                        <Pane fx:id="pane3S1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S1" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S2" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S3" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="131.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S4" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S5" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S6" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S7" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="134.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S8" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S9" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="135.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S9" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane3S10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre3S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo3S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota3S10" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets right="3.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="390.0" prefHeight="100.0" prefWidth="1434.0" spacing="12.0">
+                     <children>
+                        <Pane fx:id="pane4S1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S1" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S2" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S3" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="131.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S4" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S5" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S6" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S7" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="134.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S8" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S9" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="135.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S9" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane4S10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" layoutX="-1.0" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre4S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo4S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota4S10" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="-4.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="9.0" layoutY="504.0" prefHeight="100.0" prefWidth="1434.0" spacing="12.0">
+                     <children>
+                        <Pane fx:id="pane5S1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S1" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S2" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S3" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="131.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S4" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S5" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S6" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S7" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="134.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S8" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S9" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="135.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S9" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane5S10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre5S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo5S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota5S10" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="8.0" layoutY="617.0" prefHeight="100.0" prefWidth="1434.0" spacing="12.0">
+                     <children>
+                        <Pane fx:id="pane6S1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S1" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S1" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S2" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S2" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S3" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S3" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="131.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S4" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S4" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S5" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S5" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S5" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S6" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S6" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S6" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S7" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S7" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S7" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S8" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="134.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S8" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S8" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S9" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="135.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S9" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S9" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pane6S10" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;">
+                           <children>
+                              <GridPane gridLinesVisible="true" prefHeight="102.0" prefWidth="132.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" text="Detalle" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                                    <Label fx:id="lNombre6S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Label fx:id="lCodigo6S10" text="Label" textAlignment="JUSTIFY" GridPane.halignment="CENTER" />
+                                    <Label fx:id="lNota6S10" text="Label" textAlignment="JUSTIFY" GridPane.rowIndex="2" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
                </children>
             </AnchorPane>
         </items>

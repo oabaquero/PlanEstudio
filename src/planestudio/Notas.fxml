@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="planestudio.NotasController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planestudio.NotasController">
    <children>
       <SplitPane dividerPositions="0.6984924623115578" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
          <items>
@@ -16,11 +16,11 @@
                <children>
                   <TableView fx:id="twMateriaNota" layoutX="-2.0" layoutY="58.0" prefHeight="217.0" prefWidth="598.0">
                      <columns>
-                        <TableColumn prefWidth="106.0" text="Código" />
-                        <TableColumn prefWidth="257.90626525878906" text="Nombre" />
-                        <TableColumn prefWidth="94.44720458984375" text="Periodo" />
-                        <TableColumn minWidth="7.0" prefWidth="61.552764892578125" text="Año" />
-                        <TableColumn prefWidth="78.49407958984375" text="Nota" />
+                        <TableColumn fx:id="tcCodigo" prefWidth="106.0" text="Código" />
+                        <TableColumn fx:id="tcNombre" prefWidth="257.90626525878906" text="Nombre" />
+                        <TableColumn fx:id="tcPeriodo" prefWidth="94.44720458984375" text="Periodo" />
+                        <TableColumn fx:id="tcAno" minWidth="7.0" prefWidth="61.552764892578125" text="Año" />
+                        <TableColumn fx:id="tcNota" prefWidth="78.49407958984375" text="Nota" />
                      </columns>
                   </TableView>
                   <GridPane layoutX="1.0" prefHeight="59.0" prefWidth="598.0">
@@ -34,9 +34,12 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="114.0" text="Código:" textAlignment="RIGHT" />
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="190.0" text="Código:" textAlignment="RIGHT" />
                         <TextField fx:id="txtCodigo" GridPane.columnIndex="1" />
-                        <Button fx:id="btnConsultar" alignment="BOTTOM_LEFT" contentDisplay="TOP" mnemonicParsing="false" prefHeight="27.0" prefWidth="149.0" text="Consultar Estudiante" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnConsultar" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#accionConsultar" prefHeight="27.0" prefWidth="149.0" text="Consultar estudiante" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding></Button>
                         <Label text="Código: " GridPane.rowIndex="1" />
                         <Text fx:id="tCodigo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="144.21875" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                         <Label text="Nombres:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -55,11 +58,11 @@
                         <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="115.0" text="Materia:" GridPane.rowIndex="1" />
                         <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="116.0" text="Nota Final:" GridPane.rowIndex="2" />
                         <Button fx:id="btnActualizar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionActualizar" text="Actualizar Nota" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-                        <Button fx:id="btnRegistrar" mnemonicParsing="false" onAction="#accionRegistrar" text="Registrar Nota" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="115.0" text="Semestre:" />
-                        <ComboBox fx:id="cmbSemestre" prefHeight="27.0" prefWidth="266.0" GridPane.columnIndex="1" />
+                        <Button fx:id="btnRegistrar" alignment="CENTER" mnemonicParsing="false" onAction="#accionRegistrar" prefHeight="25.0" prefWidth="99.0" text="Registrar Nota" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="115.0" text="Periodo:" />
+                        <ComboBox fx:id="cmbPeriodo" prefHeight="27.0" prefWidth="266.0" GridPane.columnIndex="1" />
                         <ComboBox fx:id="cmbMateria" prefHeight="27.0" prefWidth="265.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="btnNuevo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionNuevo" text="Nueva Nota" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnNuevo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionNuevo" prefHeight="25.0" prefWidth="99.0" text="Nueva Nota" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
                      </children>
                      <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="131.0" />
