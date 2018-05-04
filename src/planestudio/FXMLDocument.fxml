@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planestudio.FXMLDocumentController">
+   <children>
+      <ImageView fx:id="imgPrincipal" fitHeight="131.0" fitWidth="275.0" layoutX="177.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo-universidad-de-los-llanos.png" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="menuPrincipal" prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="menuVer" mnemonicParsing="false" text="Ver">
+            <items>
+              <MenuItem fx:id="opcionEstudiantes" mnemonicParsing="false" onAction="#accionEstudiantes" text="Estudiantes" />
+                  <MenuItem fx:id="opcionMaterias" mnemonicParsing="false" onAction="#accionMaterias" text="Materias" />
+                  <MenuItem fx:id="opcionNotas" mnemonicParsing="false" onAction="#accionNotas" text="Notas" />
+                  <MenuItem fx:id="opcionPlanEstudio" mnemonicParsing="false" onAction="#accionPlanEstudio" text="Plan Estudio" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="opcionSalir" mnemonicParsing="false" onAction="#accionSalir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuAyuda" mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>

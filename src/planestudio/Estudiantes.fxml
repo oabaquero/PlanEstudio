@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="planestudio.EstudiantesController">
+   <children>
+      <SplitPane dividerPositions="0.6794625719769674" orientation="VERTICAL" prefHeight="523.0" prefWidth="790.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="598.0">
+               <children>
+                  <TableView fx:id="twEstudiantes" layoutX="-2.0" layoutY="-4.0" prefHeight="356.0" prefWidth="790.0">
+                    <columns>
+                      <TableColumn fx:id="tcCodigo" prefWidth="124.72328197956085" text="Código" />
+                      <TableColumn fx:id="tcNombres" prefWidth="182.27670288085938" text="Nombres" />
+                        <TableColumn fx:id="tcApellidos" prefWidth="170.468505859375" text="Apellidos" />
+                        <TableColumn fx:id="tcTelefono" prefWidth="127.33624267578125" text="Teléfono" />
+                        <TableColumn fx:id="tcCorreo" prefWidth="187.66375732421875" text="Correo" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane prefHeight="155.0" prefWidth="786.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="131.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.0" minWidth="10.0" prefWidth="253.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="172.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="txtCodigo" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtNombres" prefHeight="6.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtApellidos" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtCorreo" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="114.0" text="Código:" textAlignment="RIGHT" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="115.0" text="Nombres:" GridPane.rowIndex="1" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="116.0" text="Apellidos:" GridPane.rowIndex="2" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="116.0" text="Teléfono:" GridPane.rowIndex="3" />
+                        <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="115.0" text="Correo:" GridPane.rowIndex="4" />
+                        <Button fx:id="btnNuevo" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#accionNuevo" text="Nuevo" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#accionActualizar" text="Actualizar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                        <Button fx:id="btnConsultar" alignment="BOTTOM_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#accionConsultar" prefHeight="27.0" prefWidth="78.0" text="Consultar" textAlignment="JUSTIFY" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                        <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#accionGuardar" text="Registrar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#accionEditar" text="Editar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
