@@ -26,11 +26,11 @@ public class NotasEstudiante {
     public Integer getId() {
         return id.get();
     }
-    
+
     public Integer getMateriasId() {
         return materias_id.get();
     }
-    
+
     public Integer getEstudiantesId() {
         return materias_id.get();
     }
@@ -50,7 +50,7 @@ public class NotasEstudiante {
     public String getAno() {
         return ano.get();
     }
-    
+
     public String getNota() {
         return nota.get();
     }

@@ -1311,6 +1311,22 @@
                         </Pane>
                      </children>
                   </HBox>
+                  <Text layoutX="48.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre I" />
+                  <Text layoutX="194.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre II" />
+                  <Text layoutX="331.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre III" />
+                  <Text layoutX="478.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre IV" />
+                  <Text layoutX="619.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre V" />
+                  <Text layoutX="763.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre VI" />
+                  <Text layoutX="908.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre VII" />
+                  <Text layoutX="1051.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre VIII" />
+                  <Text layoutX="1193.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre IX" />
+                  <Text layoutX="1341.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semestre X" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2efe2e" height="24.0" layoutX="20.0" layoutY="753.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                  <Text layoutX="83.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materia cursada 1 vez" />
+                  <Text layoutX="306.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materia cursada  mas de 1 vez" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f3f781" height="24.0" layoutX="243.0" layoutY="753.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4a4a4" height="24.0" layoutX="513.0" layoutY="753.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
+                  <Text layoutX="576.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Materia no cursada" />
                </children>
             </AnchorPane>
         </items>

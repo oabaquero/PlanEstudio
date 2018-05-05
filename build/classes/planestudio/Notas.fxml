@@ -31,7 +31,6 @@
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label alignment="BOTTOM_LEFT" contentDisplay="RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="17.0" prefWidth="190.0" text="Código:" textAlignment="RIGHT" />
@@ -40,12 +39,6 @@
                            <padding>
                               <Insets bottom="5.0" top="5.0" />
                            </padding></Button>
-                        <Label text="Código: " GridPane.rowIndex="1" />
-                        <Text fx:id="tCodigo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="144.21875" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                        <Label text="Nombres:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Apellidos:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Text fx:id="tNombres" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.21875" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
-                        <Text fx:id="tApellidos" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="136.21875" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>

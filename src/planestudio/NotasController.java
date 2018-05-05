@@ -107,7 +107,7 @@ public class NotasController implements Initializable {
     private final ListChangeListener<NotasEstudiante> selectorTablaNotasEstudiantes
             = new ListChangeListener<NotasEstudiante>() {
         @Override
-        public void onChanged(ListChangeListener.Change<? extends NotasEstudiante> c) {            
+        public void onChanged(ListChangeListener.Change<? extends NotasEstudiante> c) {
             ponerNotaSeleccionada();
         }
     };
@@ -115,7 +115,7 @@ public class NotasController implements Initializable {
     private void ponerNotaSeleccionada() {
         final NotasEstudiante nota = getTablaNotasEstudianteSeleccionado();
         posicionNotaEnTabla = notas.indexOf(nota);
-        
+
         if (nota != null) {
             idNota = nota.getId();
             cmbMateria.setValue(nota.getNombre());
@@ -140,7 +140,7 @@ public class NotasController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         final ObservableList<NotasEstudiante> tablaPersonaSel = twMateriaNota.getSelectionModel().getSelectedItems();
         tablaPersonaSel.addListener(selectorTablaNotasEstudiantes);
-        
+
         this.llenarComboMaterias();
         this.llenarComboPeriodos();
     }
@@ -154,53 +154,55 @@ public class NotasController implements Initializable {
             alert.setContentText("No ha ingresado un codigo de estudiante!");
             alert.showAndWait();
 
-        } else 
-            cargarTodasNotasEstudiante(txtCodigo.getText()); 
+        } else {
+            cargarTodasNotasEstudiante(txtCodigo.getText());
+        }
     }
 
-    public void cargarTodasNotasEstudiante(String codigo){
-     tcCodigo.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("codigo"));
-            tcNombre.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("nombre"));
-            tcPeriodo.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, Integer>("periodo"));
-            tcAno.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("ano"));
-            tcNota.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("nota"));
-            notas = FXCollections.observableArrayList();
-            twMateriaNota.setItems(notas);
-            try {
-                sql = "select notas.id, materias.codigo, materias.nombre, notas.periodo, notas.ano, notas.nota, "
-                        +"notas.estudiantes_id, notas.materias_id "
-                        + "from notas inner join estudiantes on notas.estudiantes_id = estudiantes.id "
-                        + "inner join materias on materias.id = notas.materias_id "
-                        + "where estudiantes.codigo = '" + codigo+"'"
-                        + " order by notas.ano asc ";
-                pst = con.prepareStatement(sql);
-                rs = pst.executeQuery();
-                while (rs.next()) {
-                    NotasEstudiante objNotas = new NotasEstudiante();
-                    objNotas.id.set(rs.getInt(1));
-                    objNotas.codigo.set(rs.getString(2));
-                    objNotas.nombre.set(rs.getString(3));
-                    objNotas.periodo.set(rs.getString(4));
-                    objNotas.ano.set(rs.getString(5));
-                    objNotas.nota.set(rs.getString(6));
-                    objNotas.estudiantes_id.set(rs.getInt(7));
-                    objNotas.materias_id.set(rs.getInt(8));
-                    notas.add(objNotas);
-                }
-
-                System.out.println("Notas de estudiante consultadas correctamente");
-
-            } catch (SQLException ex) {
-                Logger.getLogger(EstudiantesController.class.getName()).log(Level.SEVERE, null, ex);
+    public void cargarTodasNotasEstudiante(String codigo) {
+        tcCodigo.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("codigo"));
+        tcNombre.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("nombre"));
+        tcPeriodo.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, Integer>("periodo"));
+        tcAno.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("ano"));
+        tcNota.setCellValueFactory(new PropertyValueFactory<NotasEstudiante, String>("nota"));
+        notas = FXCollections.observableArrayList();
+        twMateriaNota.setItems(notas);
+        try {
+            sql = "select notas.id, materias.codigo, materias.nombre, notas.periodo, notas.ano, notas.nota, "
+                    + "notas.estudiantes_id, notas.materias_id "
+                    + "from notas inner join estudiantes on notas.estudiantes_id = estudiantes.id "
+                    + "inner join materias on materias.id = notas.materias_id "
+                    + "where estudiantes.codigo = '" + codigo + "'"
+                    + " order by notas.ano asc ";
+            pst = con.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()) {
+                NotasEstudiante objNotas = new NotasEstudiante();
+                objNotas.id.set(rs.getInt(1));
+                objNotas.codigo.set(rs.getString(2));
+                objNotas.nombre.set(rs.getString(3));
+                objNotas.periodo.set(rs.getString(4));
+                objNotas.ano.set(rs.getString(5));
+                objNotas.nota.set(rs.getString(6));
+                objNotas.estudiantes_id.set(rs.getInt(7));
+                objNotas.materias_id.set(rs.getInt(8));
+                notas.add(objNotas);
             }
+
+            System.out.println("Notas de estudiante consultadas correctamente");
+
+        } catch (SQLException ex) {
+            Logger.getLogger(EstudiantesController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+
     @FXML
     public void accionNuevo(ActionEvent event) {
         this.limpiarFormulario();
         btnRegistrar.setDisable(false);
     }
-    
-    public void limpiarFormulario(){
+
+    public void limpiarFormulario() {
         cmbPeriodo.setValue(null);
         cmbMateria.setValue(null);
         txtNota.setText("");
@@ -214,23 +216,22 @@ public class NotasController implements Initializable {
             pst.setString(1, txtNota.getText());
             pst.setInt(2, idNota);
             pst.executeUpdate();
-            if(pst.getUpdateCount()>0){
+            if (pst.getUpdateCount() > 0) {
                 Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Notas de Estudiante");
-            alert.setHeaderText(null);
-            alert.setContentText("La nota ha sido actualizada correctamente.");
-            alert.showAndWait();
-            
-            this.cargarTodasNotasEstudiante(txtCodigo.getText());
-            }
-            else{
+                alert.setTitle("Notas de Estudiante");
+                alert.setHeaderText(null);
+                alert.setContentText("La nota ha sido actualizada correctamente.");
+                alert.showAndWait();
+
+                this.cargarTodasNotasEstudiante(txtCodigo.getText());
+            } else {
                 Alert alert = new Alert(AlertType.WARNING);
-            alert.setTitle("Plan de Estudio - EIS");
-            alert.setHeaderText(null);
-            alert.setContentText("El estudiante no ha sido actualizado.");
-            alert.showAndWait();
+                alert.setTitle("Plan de Estudio - EIS");
+                alert.setHeaderText(null);
+                alert.setContentText("El estudiante no ha sido actualizado.");
+                alert.showAndWait();
             }
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
             Alert alert = new Alert(AlertType.ERROR);
@@ -242,23 +243,23 @@ public class NotasController implements Initializable {
     }
 
     @FXML
-    public void accionRegistrar(ActionEvent event) {        
+    public void accionRegistrar(ActionEvent event) {
         String mat = cmbMateria.getSelectionModel().getSelectedItem().toString();
-        sql = "INSERT INTO notas (estudiantes_id,materias_id,periodo,ano,nota)" 
-            + "VALUES((select id from estudiantes where codigo ='"+txtCodigo.getText()+"'),(select id from materias where nombre ='"+mat+"'),?,(Select Year(CURDATE())),?)";                
+        sql = "INSERT INTO notas (estudiantes_id,materias_id,periodo,ano,nota)"
+                + "VALUES((select id from estudiantes where codigo ='" + txtCodigo.getText() + "'),(select id from materias where nombre ='" + mat + "'),?,(Select Year(CURDATE())),?)";
         try {
-            
+
             pst = con.prepareStatement(sql);
             //pst.setString(1, cmbMateria.getSelectionModel().getSelectedItem().toString());
-            pst.setString(1, cmbPeriodo.getSelectionModel().getSelectedItem().toString());       
+            pst.setString(1, cmbPeriodo.getSelectionModel().getSelectedItem().toString());
             pst.setDouble(2, Double.parseDouble(txtNota.getText()));
-         
+
             pst.executeUpdate();
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setTitle("Plan de Estudio - EIS");
             alert.setHeaderText(null);
             alert.setContentText("La nota ha sido registrada correctamente.");
-            alert.showAndWait();            
+            alert.showAndWait();
             this.limpiarFormulario();
             this.cargarTodasNotasEstudiante(txtCodigo.getText());
         } catch (SQLException ex) {

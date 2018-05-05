@@ -87,7 +87,7 @@ public class EstudiantesController implements Initializable {
 
     ObservableList<Estudiante> estudiantes;
     String codigo, nombres, apellidos, telefono, correo;
-    int posicionEstudianteEnTabla,idEstudiante;
+    int posicionEstudianteEnTabla, idEstudiante;
 
     ConectarBase conectar = new ConectarBase();
     Connection con = conectar.conexion();
@@ -127,7 +127,7 @@ public class EstudiantesController implements Initializable {
         if (estudiante != null) {
 
             // Pongo los textFields con los datos correspondientes
-            idEstudiante=estudiante.getId();
+            idEstudiante = estudiante.getId();
             txtCodigo.setText(estudiante.getCodigo());
             txtNombres.setText(estudiante.getNombres());
             txtApellidos.setText(estudiante.getApellidos());
@@ -194,10 +194,12 @@ public class EstudiantesController implements Initializable {
             Logger.getLogger(EstudiantesController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public void cargarTodosEstudiantes(){
+
+    public void cargarTodosEstudiantes() {
         sql = "SELECT id,codigo,nombres,apellidos,telefono,correo FROM estudiantes ";
         this.cargarDatosTableView(sql);
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -209,7 +211,7 @@ public class EstudiantesController implements Initializable {
         final ObservableList<Estudiante> tablaPersonaSel = twEstudiantes.getSelectionModel().getSelectedItems();
         tablaPersonaSel.addListener(selectorTablaEstudiantes);
         this.cargarTodosEstudiantes();
-        
+
     }
 
     @FXML
@@ -229,6 +231,7 @@ public class EstudiantesController implements Initializable {
         btnEditar.setDisable(true);
         btnGuardar.setDisable(false);
     }
+
     @FXML
     public void accionEditar(ActionEvent event) {
         this.EdiableTextField(true);
@@ -240,8 +243,9 @@ public class EstudiantesController implements Initializable {
 
     @FXML
     public void accionActualizar(ActionEvent event) {
-        if(!this.validarTextField())
+        if (!this.validarTextField()) {
             return;
+        }
         sql = "UPDATE estudiantes SET codigo = ?,nombres = ?, apellidos = ?, telefono = ?, correo = ? WHERE id = ?";
         try {
             pst = con.prepareStatement(sql);
@@ -252,23 +256,22 @@ public class EstudiantesController implements Initializable {
             pst.setString(5, correo);
             pst.setInt(6, idEstudiante);
             pst.executeUpdate();
-            if(pst.getUpdateCount()>0){
+            if (pst.getUpdateCount() > 0) {
                 Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Plan de Estudio - EIS");
-            alert.setHeaderText(null);
-            alert.setContentText("El estudiante ha sido actualizado correctamente.");
-            alert.showAndWait();
-            this.limpiarTextField();
-            this.cargarTodosEstudiantes();
-            }
-            else{
+                alert.setTitle("Plan de Estudio - EIS");
+                alert.setHeaderText(null);
+                alert.setContentText("El estudiante ha sido actualizado correctamente.");
+                alert.showAndWait();
+                this.limpiarTextField();
+                this.cargarTodosEstudiantes();
+            } else {
                 Alert alert = new Alert(AlertType.WARNING);
-            alert.setTitle("Plan de Estudio - EIS");
-            alert.setHeaderText(null);
-            alert.setContentText("El estudiante no ha sido actualizado.");
-            alert.showAndWait();
+                alert.setTitle("Plan de Estudio - EIS");
+                alert.setHeaderText(null);
+                alert.setContentText("El estudiante no ha sido actualizado.");
+                alert.showAndWait();
             }
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
             Alert alert = new Alert(AlertType.ERROR);
@@ -278,13 +281,14 @@ public class EstudiantesController implements Initializable {
             alert.showAndWait();
         }
     }
-    public boolean validarTextField(){
+
+    public boolean validarTextField() {
         codigo = txtCodigo.getText();
         nombres = txtNombres.getText();
         apellidos = txtApellidos.getText();
         telefono = txtTelefono.getText();
         correo = txtCorreo.getText();
-        if(codigo.isEmpty()){
+        if (codigo.isEmpty()) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Plan de Estudio - EIS");
             alert.setHeaderText(null);
@@ -292,7 +296,7 @@ public class EstudiantesController implements Initializable {
             alert.showAndWait();
             return false;
         }
-        if(nombres.isEmpty()){
+        if (nombres.isEmpty()) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Plan de Estudio - EIS");
             alert.setHeaderText(null);
@@ -300,7 +304,7 @@ public class EstudiantesController implements Initializable {
             alert.showAndWait();
             return false;
         }
-        if(apellidos.isEmpty()){
+        if (apellidos.isEmpty()) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Plan de Estudio - EIS");
             alert.setHeaderText(null);
@@ -308,7 +312,7 @@ public class EstudiantesController implements Initializable {
             alert.showAndWait();
             return false;
         }
-        if(telefono.isEmpty()){
+        if (telefono.isEmpty()) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Plan de Estudio - EIS");
             alert.setHeaderText(null);
@@ -316,7 +320,7 @@ public class EstudiantesController implements Initializable {
             alert.showAndWait();
             return false;
         }
-        if(correo.isEmpty()){
+        if (correo.isEmpty()) {
             Alert alert = new Alert(AlertType.WARNING);
             alert.setTitle("Plan de Estudio - EIS");
             alert.setHeaderText(null);
@@ -326,10 +330,12 @@ public class EstudiantesController implements Initializable {
         }
         return true;
     }
+
     @FXML
     public void accionGuardar(ActionEvent event) {
-        if(!this.validarTextField())
+        if (!this.validarTextField()) {
             return;
+        }
         sql = "INSERT INTO estudiantes (codigo,nombres,apellidos,telefono,correo)" + "VALUES(?,?,?,?,?)";
         try {
             pst = con.prepareStatement(sql);
